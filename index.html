@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Solicitação de Projeto de Programação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário de Solicitação de Projeto de Programação</h1>
+        <form id="projectForm">
+            <fieldset>
+                <legend>Informações Básicas</legend>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+                
+                <label for="empresa">Empresa/Organização (se aplicável):</label>
+                <input type="text" id="empresa" name="empresa">
+            </fieldset>
+
+            <fieldset>
+                <legend>Descrição do Projeto</legend>
+                <label for="tipoProjeto">Tipo de Projeto:</label>
+                <select id="tipoProjeto" name="tipoProjeto" required>
+                    <option value="template">Template de Website</option>
+                    <option value="site">Site de Divulgação Pessoal</option>
+                    <option value="appWeb">Aplicativo Web</option>
+                    <option value="outros">Outros</option>
+                </select>
+                
+                <label for="descricaoProjeto">Descrição Geral do Projeto:</label>
+                <textarea id="descricaoProjeto" name="descricaoProjeto" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Funcionalidades e Recursos</legend>
+                <label><input type="checkbox" name="funcionalidades" value="paginaInicial"> Página Inicial</label>
+                <label><input type="checkbox" name="funcionalidades" value="sobreNos"> Sobre Nós</label>
+                <label><input type="checkbox" name="funcionalidades" value="servicos"> Serviços/Produtos</label>
+                <label><input type="checkbox" name="funcionalidades" value="blog"> Blog</label>
+                <label><input type="checkbox" name="funcionalidades" value="galeria"> Galeria de Fotos</label>
+                <label><input type="checkbox" name="funcionalidades" value="contato"> Formulário de Contato</label>
+                <label><input type="checkbox" name="funcionalidades" value="lojaOnline"> Loja Online</label>
+                <label><input type="checkbox" name="funcionalidades" value="login"> Sistema de Login/Registro</label>
+                <label><input type="checkbox" name="funcionalidades" value="dashboard"> Dashboard Administrativo</label>
+                <label><input type="checkbox" name="funcionalidades" value="redesSociais"> Integração com Redes Sociais</label>
+                <label><input type="checkbox" name="funcionalidades" value="outros"> Outros</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Prazos e Orçamento</legend>
+                <label for="prazo">Qual é o prazo desejado para conclusão do projeto?</label>
+                <select id="prazo" name="prazo" required>
+                    <option value="1-2 semanas">1-2 semanas</option>
+                    <option value="1 mês">1 mês</option>
+                    <option value="2-3 meses">2-3 meses</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="orcamento">Qual é o orçamento disponível para este projeto?</label>
+                <select id="orcamento" name="orcamento" required>
+                    <option value="menos de R$1.000">Menos de R$1.000</option>
+                    <option value="R$1.000 - R$5.000">R$1.000 - R$5.000</option>
+                    <option value="R$5.000 - R$10.000">R$5.000 - R$10.000</option>
+                    <option value="acima de R$10.000">Acima de R$10.000</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Conteúdo e Materiais</legend>
+                <label for="conteudo">Você fornecerá o conteúdo (textos, imagens, vídeos) para o site?</label>
+                <select id="conteudo" name="conteudo" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não, preciso de ajuda com isso</option>
+                </select>
+                
+                <label for="inspiracao">Existe algum site ou aplicativo que você gostaria que servisse de inspiração?</label>
+                <input type="text" id="inspiracao" name="inspiracao">
+            </fieldset>
+
+            <fieldset>
+                <legend>Considerações Adicionais</legend>
+                <label for="adicionais">Existem outras informações ou requisitos que você gostaria de adicionar?</label>
+                <textarea id="adicionais" name="adicionais"></textarea>
+
+                <label for="contatoPreferido">Como você gostaria de ser contatado(a) para discussões adicionais?</label>
+                <select id="contatoPreferido" name="contatoPreferido" required>
+                    <option value="email">E-mail</option>
+                    <option value="telefone">Telefone</option>
+                    <option value="videoconferencia">Videoconferência (Zoom, Google Meet, etc.)</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </fieldset>
+
+            <button type="button" onclick="generateFile()">Baixar Formulário</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
